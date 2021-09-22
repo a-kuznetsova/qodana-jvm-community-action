@@ -1,8 +1,8 @@
-# Qodana JVM Community Github Action
+# Qodana JVM Community
 
 **Qodana** is a code quality monitoring platform that allows you to evaluate the integrity of code you own, contract, or purchase. It brings into your CI/CD pipelines all the smart features you love in the JetBrains IDEs plus continues adding project-level checks like clone detection and license audit.
 
-This Github Action is based on JetBrains/qodana-jvm-community docker image. It provides static analysis for Java and Kotlin for Server Side projects, and related frameworks and technologies.
+Qodana JVM Community is based on IntelliJ IDEA Community and provides static analysis for Java and Kotlin for Server Side projects.
 
 **Table of Contents**
 
@@ -32,18 +32,16 @@ This Github Action is based on JetBrains/qodana-jvm-community docker image. It p
 * `additional-env-variables` - Additional environment variables to pass to qodana docker image
 
 ```yaml
-- name: Qodana - JVM
-  uses: JetBrains/qodana-jvm-community-action@v1.1.1
+- uses: JetBrains/qodana-jvm-community-action@v1.1.1
 ```
 
 All action's inputs are optional. 
 ```yaml
-- name: Qodana - JVM
-  uses: JetBrains/qodana-jvm-community-action@v1.1.1
+- uses: JetBrains/qodana-jvm-community-action@v1.1.1
   with:
       fail-threshold: 10
       additional-env-variables: |
-            IDE_PROPERTIES_PROPERTY='-Didea.headless.enable.statistics=false;-Didea.required.plugins.id=JavaScript,org.intellij.grails'
+            IDE_PROPERTIES_PROPERTY='-Didea.required.plugins.id=JavaScript,org.intellij.grails'
 ```
 
 <!-- #TODO: update output results and License Summary -->
@@ -64,7 +62,8 @@ An example of the Qodana command-line summary output:
 ```
 
 Full Qodana results are available in the file `results-allProblems.json` located in the `results-dir` folder.
-
+ -->
+ 
 ## License Summary
 
-By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html). -->
+By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html).
