@@ -1,0 +1,32 @@
+name: Qodana - JVM Community
+
+on:
+  workflow_dispatch:
+
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache Qodana dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/work/_temp/_github_home/qodana-cache
+          key: ${{ runner.os }}-qodana-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-qodana-${{ github.ref }}
+            ${{ runner.os }}-qodana-
+            
+      - uses: JetBrains/qodana-jvm-community-action@v1.1.1
+        with:
+          additional-volumes: |
+            /your/custom/path/myplugin1:/opt/idea/plugins/myplugin1;
+            /your/custom/path/myplugin2:/opt/idea/plugins/myplugin2
+          additional-env-variables: |
+            IDE_PROPERTIES_PROPERTY='-Didea.headless.enable.statistics=false;-Didea.required.plugins.id=JavaScript,org.intellij.grails'
+
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ${{ github.workspace }}/qodana
