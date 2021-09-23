@@ -57,9 +57,7 @@ An example of the Qodana command-line summary output:
 
 ---- Problems reported: 3 ----
 ```
-
-Full Qodana results are available in the file `results-allProblems.json` located in the `results-dir` folder.
-
+ 
 ## License Summary
 
 By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html).
