@@ -1,4 +1,4 @@
-name: Qodana - JVM Community
+name: Qodana
 
 on:
   workflow_dispatch:
@@ -23,9 +23,6 @@ jobs:
           additional-volumes: |
             /your/custom/path/myplugin1:/opt/idea/plugins/myplugin1;
             /your/custom/path/myplugin2:/opt/idea/plugins/myplugin2
-          additional-env-variables: |
-            IDE_PROPERTIES_PROPERTY='-Didea.headless.enable.statistics=false;-Didea.required.plugins.id=JavaScript,org.intellij.grails'
-
 
       - uses: actions/upload-artifact@v2
         with:
