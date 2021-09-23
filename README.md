@@ -60,4 +60,4 @@ An example of the Qodana command-line summary output:
  
 ## License Summary
 
-By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html).
+By using Qodana, you agree to the [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html).
